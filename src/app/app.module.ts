@@ -3,8 +3,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { LazyLoadImageModule } from 'ng-lazyload-image';
-
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { IsDebug } from '@ionic-native/is-debug';
@@ -19,19 +17,16 @@ import { DetailsPage } from '../pages/details/details';
 
 import { RssService } from '../providers/rss-service';
 
-import { RangeNumberPipe } from '../pipes/range-number';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   declarations: [
     SaskatoonApp,
-    ListingPage,
-    DetailsPage,
-    RangeNumberPipe
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    LazyLoadImageModule,
+    PipesModule,
     IonicModule.forRoot(SaskatoonApp)
   ],
   bootstrap: [ IonicApp ],
