@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-title>Location</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="shareDetails($event)">
+        <ion-icon ios="ios-share-outline" md="md-share"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list *ngIf="location">
+    <ion-item text-wrap>
+      <h1>{{location.name}}</h1>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{location.address}}</h2>
+    </ion-item>
+    <ion-item text-wrap>
+      <h2>{{location.description}}</h2>
+    </ion-item>
+    <ion-item text-wrap>
+      <ion-icon color="dark" ios="ios-medkit" md="md-medkit" *ngFor="let unit of location.units | rangeNumber"></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="staticMap">
+      <img class="lazy" [lazyLoad]="staticMap" [offset]="100"/>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar color="navbar">
+    <ion-buttons>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>AED Locations</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="refreshLocations(false)">
+        <ion-icon ios="ios-refresh" md="md-refresh"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content color="background">
+  <ion-refresher (ionRefresh)="loadLocations(false, $event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list *ngIf="locations">
+    <ion-card color="white" tappable (click)="showDetails(location)" *ngFor="let location of locations">
+      <ion-card-header>
+        {{location.name}}
+      </ion-card-header>
+      <ion-card-content>
+        <p class="address">{{location.address}}</p>
+        <p class="description">{{location.description}}</p>
+        <p class="units">
+          <ion-icon color="dark" ios="ios-medkit" md="md-medkit" *ngFor="let unit of location.units | rangeNumber"></ion-icon>
+        </p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+</ion-content>

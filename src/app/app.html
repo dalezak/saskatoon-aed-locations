@@ -1,0 +1,18 @@
+<ion-menu #menu [content]="content" side="left" type="reveal" swipeEnabled="false">
+  <ion-header>
+    <ion-toolbar color="navbar">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item tappable menuClose (click)="showCityOfSaskatoon()">
+        City of Saskatoon
+      </ion-item>
+      <ion-item tappable menuClose (click)="showOpenDataCatalogue()">
+        Open Data Catalogue
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<ion-nav  #content #rootNavController swipeBackEnabled="false" [root]="rootPage"></ion-nav>

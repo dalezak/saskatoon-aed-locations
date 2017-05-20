@@ -1,0 +1,17 @@
+page-details {
+  ion-icon {
+    font-size: 30px;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  img {
+    width: 100%;
+    transition: opacity 1s;
+    &.lazy {
+      opacity: 0;
+    }
+    &.ng-lazyloaded {
+      opacity: 1;
+    }
+  }
+}
