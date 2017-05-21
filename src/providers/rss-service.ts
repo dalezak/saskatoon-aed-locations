@@ -11,7 +11,7 @@ import 'rxjs/add/operator/timeout';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/observable/throw';
 
-import { IsDebug } from '@ionic-native/is-debug';
+import { Device } from '@ionic-native/device';
 import { NativeStorage } from '@ionic-native/native-storage';
 
 import { Location } from '../models/location';
@@ -23,7 +23,7 @@ export class RssService {
 
   constructor(
     protected http:Http,
-    protected isDebug:IsDebug,
+    protected device:Device,
     protected platform:Platform,
     protected storage:NativeStorage) {
   }
@@ -55,14 +55,12 @@ export class RssService {
   getUrl():Promise<string> {
     return new Promise((resolve, reject) => {
       this.platform.ready().then(() => {
-        this.isDebug.getIsDebug().then((debug:boolean) => {
-          if (debug) {
-            resolve("/opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations/");
-          }
-          else {
-            resolve("http://opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations/");
-          }
-        });
+        if (this.device.isVirtual) {
+          resolve("/opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations/");
+        }
+        else {
+          resolve("http://opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations/");
+        }
       });
     });
   }

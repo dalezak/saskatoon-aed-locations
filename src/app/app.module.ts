@@ -3,17 +3,18 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { Device } from '@ionic-native/device';
 import { StatusBar } from '@ionic-native/status-bar';
-import { IsDebug } from '@ionic-native/is-debug';
-import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { SplashScreen } from '@ionic-native/splash-screen';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 import { SaskatoonApp } from './app.component';
-import { ListingPage } from '../pages/listing/listing';
-import { DetailsPage } from '../pages/details/details';
+
+import { ListingModule } from '../pages/listing/listing.module';
+import { DetailsModule } from '../pages/details/details.module';
 
 import { RssService } from '../providers/rss-service';
 
@@ -27,16 +28,16 @@ import { PipesModule } from '../pipes/pipes.module';
     BrowserModule,
     HttpModule,
     PipesModule,
+    ListingModule,
+    DetailsModule,
     IonicModule.forRoot(SaskatoonApp)
   ],
   bootstrap: [ IonicApp ],
   entryComponents: [
-    SaskatoonApp,
-    ListingPage,
-    DetailsPage
+    SaskatoonApp
   ],
   providers: [
-    { provide: IsDebug, useClass: IsDebug },
+    { provide: Device, useClass: Device },
     { provide: StatusBar, useClass: StatusBar },
     { provide: SplashScreen, useClass: SplashScreen },
     { provide: NativeGeocoder, useClass: NativeGeocoder },

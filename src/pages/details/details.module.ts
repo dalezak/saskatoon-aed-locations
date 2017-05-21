@@ -10,6 +10,9 @@ import { PipesModule } from '../../pipes/pipes.module';
   declarations: [
     DetailsPage,
   ],
+  entryComponents: [
+    DetailsPage
+  ],
   imports: [
     PipesModule,
     LazyLoadImageModule,

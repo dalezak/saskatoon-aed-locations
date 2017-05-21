@@ -8,6 +8,9 @@ import { PipesModule } from '../../pipes/pipes.module';
   declarations: [
     ListingPage,
   ],
+  entryComponents: [
+    ListingPage
+  ],
   imports: [
     PipesModule,
     IonicPageModule.forChild(ListingPage),
