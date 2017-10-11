@@ -1,4 +1,17 @@
 page-details {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  ion-content {
+    background-color: #fff;
+    ion-list {
+      background-color: #fff !important;
+      ion-item {
+        background-color: #fff;
+      }
+    }
+  }
   ion-icon {
     font-size: 30px;
     margin-left: 0;

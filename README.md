@@ -16,22 +16,36 @@
 
 ---
 
-### Build
+### iOS Run
 ```
-ionic build ios
+ionic cordova run ios --livereload --consolelogs --serverlogs --address localhost --port 3000
 ```
+
+### iOS Build
 ```
-ionic build android
+rvm use system
+ionic cordova build ios --prod --release -- --buildConfig=build.json
 ```
 
 ---
 
-### Run
+### Android Run
 ```
-ionic run ios --livereload --consolelogs --serverlogs --address localhost --port 3000
+ionic cordova run android --livereload --consolelogs --serverlogs --address localhost --port 3000
+```
+
+### Android Build
+```
+ionic cordova build android --prod --release --device -- --buildConfig=build.json
 ```
 ```
-ionic run android --livereload --consolelogs --serverlogs --address localhost --port 3000
+zip -d platforms/android/build/outputs/apk/android-release.apk META-INF/\*
+```
+```
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore saskatoon.keystore -storepass Saskatoon -keypass Saskatoon platforms/android/build/outputs/apk/android-release.apk saskatoon
+```
+```
+./zipalign -f -v 4 platforms/android/build/outputs/apk/android-release.apk build/AED.apk
 ```
 
 ---

@@ -6,11 +6,13 @@
   </ion-header>
   <ion-content>
     <ion-list>
-      <ion-item tappable menuClose (click)="showCityOfSaskatoon()">
-        City of Saskatoon
+      <ion-item tappable menuClose (click)="showUrl('https://www.saskatoon.ca')">
+        <div>City of Saskatoon</div>
+        <p>https://www.saskatoon.ca</p>
       </ion-item>
-      <ion-item tappable menuClose (click)="showOpenDataCatalogue()">
-        Open Data Catalogue
+      <ion-item tappable menuClose (click)="showUrl('http://opendata-saskatoon.cloudapp.net')">
+        <div>Open Data Catalogue</div>
+        <p>http://opendata-saskatoon.cloudapp.net</p>
       </ion-item>
     </ion-list>
   </ion-content>

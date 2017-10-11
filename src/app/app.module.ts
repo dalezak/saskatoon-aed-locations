@@ -6,7 +6,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { Device } from '@ionic-native/device';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { ThemeableBrowser } from '@ionic-native/themeable-browser';
 import { SocialSharing } from '@ionic-native/social-sharing';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
@@ -41,7 +41,7 @@ import { PipesModule } from '../pipes/pipes.module';
     { provide: StatusBar, useClass: StatusBar },
     { provide: SplashScreen, useClass: SplashScreen },
     { provide: NativeGeocoder, useClass: NativeGeocoder },
-    { provide: InAppBrowser, useClass: InAppBrowser },
+    { provide: ThemeableBrowser, useClass: ThemeableBrowser },
     { provide: SocialSharing, useClass: SocialSharing },
     { provide: NativeStorage, useClass: NativeStorage },
     { provide: RssService, useClass: RssService },

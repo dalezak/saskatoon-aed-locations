@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage, Platform, NavParams } from 'ionic-angular';
 
-import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
 import { SocialSharing } from '@ionic-native/social-sharing';
+import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
 
 import { Location } from '../../models/location';
 
@@ -18,9 +18,10 @@ export class DetailsPage {
   googleMapsKey:string = "AIzaSyA_Mlv2Vz6OYNYVnnwNITcn9wbUdz-FXuA";
 
   constructor(
+    protected platform:Platform,
     protected navParams:NavParams,
-    protected nativeGeocoder:NativeGeocoder,
-    protected socialSharing:SocialSharing) {
+    protected socialSharing:SocialSharing,
+    protected nativeGeocoder:NativeGeocoder) {
   }
 
   ionViewWillEnter() {
@@ -61,11 +62,9 @@ export class DetailsPage {
     let file = null;
     let image = this.staticMap;
     this.socialSharing.share(message, subject, file, image).then((shared) => {
-      if (shared) {
-
-      }
+      // TODO handle success
     }).catch(() => {
-
+      // TODO handle error
     });
   }
 

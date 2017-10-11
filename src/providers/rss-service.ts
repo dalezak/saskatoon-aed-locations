@@ -80,6 +80,14 @@ export class RssService {
               reject(error);
             });
           }
+        },
+        (error:any) => {
+          this.getData(url, false).then((data:any) => {
+            resolve(data);
+          },
+          (error:any) => {
+            reject(error);
+          });
         });
       }
       else {

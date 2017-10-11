@@ -40,6 +40,7 @@ export class ListingPage {
       }
     },
     (error:any) => {
+      console.error(error);
       if (event) {
         event.complete();
       }
@@ -51,6 +52,9 @@ export class ListingPage {
     let loading = this.showLoading("Loading...");
     this.loadLocations(cache).then(done => {
       loading.dismiss();
+    },
+    (error:any) => {
+      this.showToast(JSON.stringify(error));
     });
   }
 

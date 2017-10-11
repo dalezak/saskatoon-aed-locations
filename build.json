@@ -1,0 +1,32 @@
+{
+  "ios": {
+    "debug": {
+      "teamName": "Dale Zak",
+      "packageType": "development",
+      "developmentTeam": "YZ95NQR9KV",
+      "codeSignIdentity": "iPhone Developer",
+      "provisioningProfile": "47784fef-e133-432e-a583-0dc6ef1c86ed"
+    },
+    "release": {
+      "teamName": "Dale Zak",
+      "packageType": "app-store",
+      "developmentTeam": "YZ95NQR9KV",
+      "codeSignIdentity": "iPhone Developer",
+      "provisioningProfile": "1f968af5-8ae8-4db3-970d-9a2b18fe7ecb"
+    }
+  },
+  "android": {
+    "debug": {
+      "alias": "saskatoon",
+      "keystore": "saskatoon.keystore",
+      "password" : "Saskatoon",
+      "storePassword": "Saskatoon"
+    },
+    "release": {
+      "alias": "saskatoon",
+      "keystore": "saskatoon.keystore",
+      "password" : "Saskatoon",
+      "storePassword": "Saskatoon"
+    }
+  }
+}

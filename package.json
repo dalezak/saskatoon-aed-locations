@@ -1,60 +1,97 @@
 {
-  "name": "saskatoon-aed-locations",
-  "version": "0.0.0",
-  "author": "Dale Zak",
-  "homepage": "https://github.com/dalezak",
-  "private": true,
-  "scripts": {
-    "clean": "ionic-app-scripts clean",
-    "build": "ionic-app-scripts build",
-    "lint": "ionic-app-scripts lint",
-    "ionic:build": "ionic-app-scripts build",
-    "ionic:serve": "ionic-app-scripts serve"
-  },
-  "dependencies": {
-    "@angular/common": "4.1.0",
-    "@angular/compiler": "4.1.0",
-    "@angular/compiler-cli": "4.1.0",
-    "@angular/core": "4.1.0",
-    "@angular/forms": "4.1.0",
-    "@angular/http": "4.1.0",
-    "@angular/platform-browser": "4.1.0",
-    "@angular/platform-browser-dynamic": "4.1.0",
-    "@ionic-native/core": "3.7.0",
-    "@ionic-native/device": "^3.10.2",
-    "@ionic-native/in-app-browser": "3.7.0",
-    "@ionic-native/native-geocoder": "3.7.0",
-    "@ionic-native/native-storage": "^3.10.0",
-    "@ionic-native/social-sharing": "3.7.0",
-    "@ionic-native/splash-screen": "3.7.0",
-    "@ionic-native/status-bar": "3.7.0",
-    "@ionic/storage": "2.0.1",
-    "ionic-angular": "3.2.1",
-    "ionicons": "3.0.0",
-    "ng-lazyload-image": "^3.1.1",
-    "rxjs": "5.1.1",
-    "sw-toolbox": "3.6.0",
-    "zone.js": "0.8.10"
-  },
-  "devDependencies": {
-    "@ionic/app-scripts": "1.3.7",
-    "typescript": "2.2.1"
-  },
-  "cordovaPlugins": [
-    "cordova-plugin-whitelist",
-    "cordova-plugin-console",
-    "cordova-plugin-device",
-    "cordova-plugin-statusbar",
-    "cordova-plugin-splashscreen",
-    "ionic-plugin-keyboard"
-  ],
-  "cordovaPlatforms": [
-    "ios",
-    {
-      "platform": "ios",
-      "version": "",
-      "locator": "ios"
+    "name": "saskatoon-aed-locations",
+    "version": "0.0.1",
+    "author": "Dale Zak",
+    "homepage": "https://github.com/dalezak",
+    "private": true,
+    "scripts": {
+        "clean": "ionic-app-scripts clean",
+        "build": "ionic-app-scripts build",
+        "lint": "ionic-app-scripts lint",
+        "ionic:build": "ionic-app-scripts build",
+        "ionic:serve": "ionic-app-scripts serve"
+    },
+    "dependencies": {
+        "@angular/common": "^4.4.3",
+        "@angular/compiler": "^4.4.3",
+        "@angular/compiler-cli": "^4.4.3",
+        "@angular/core": "^4.4.3",
+        "@angular/forms": "^4.4.3",
+        "@angular/http": "^4.4.3",
+        "@angular/platform-browser": "^4.4.3",
+        "@angular/platform-browser-dynamic": "^4.4.3",
+        "@ionic-native/core": "^3.14.0",
+        "@ionic-native/device": "^3.14.0",
+        "@ionic-native/native-geocoder": "^3.14.0",
+        "@ionic-native/native-storage": "^3.14.0",
+        "@ionic-native/social-sharing": "^3.14.0",
+        "@ionic-native/splash-screen": "^3.14.0",
+        "@ionic-native/status-bar": "^3.14.0",
+        "@ionic-native/themeable-browser": "^4.3.1",
+        "@ionic/storage": "^2.0.1",
+        "cordova-android": "^6.2.3",
+        "cordova-ios": "^4.4.0",
+        "cordova-plugin-add-swift-support": "^1.6.0",
+        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-device": "^1.1.6",
+        "cordova-plugin-inappbrowser": "^1.7.1",
+        "cordova-plugin-nativegeocoder": "^1.0.2",
+        "cordova-plugin-nativestorage": "^2.2.2",
+        "cordova-plugin-splashscreen": "^4.0.3",
+        "cordova-plugin-statusbar": "^2.2.3",
+        "cordova-plugin-themeablebrowser": "^0.2.17",
+        "cordova-plugin-whitelist": "^1.3.2",
+        "cordova-plugin-x-socialsharing": "^5.2.0",
+        "es6-promise-plugin": "^4.1.0",
+        "ionic-angular": "^3.7.1",
+        "ionic-plugin-keyboard": "^2.2.1",
+        "ionicons": "3.0.0",
+        "ng-lazyload-image": "^3.1.1",
+        "rxjs": "^5.4.3",
+        "sw-toolbox": "^3.6.0",
+        "zone.js": "^0.8.17"
+    },
+    "devDependencies": {
+        "@ionic/app-scripts": "^3.0.0",
+        "typescript": "2.3.4"
+    },
+    "cordovaPlugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-statusbar",
+        "cordova-plugin-splashscreen",
+        "cordova-plugin-themeablebrowser",
+        "cordova-plugin-nativegeocoder",
+        "cordova-plugin-nativestorage",
+        "cordova-plugin-whitelist",
+        "cordova-plugin-x-socialsharing",
+        "ionic-plugin-keyboard"
+    ],
+    "cordovaPlatforms": [
+        "ios",
+        {
+            "platform": "ios",
+            "version": "",
+            "locator": "ios"
+        }
+    ],
+    "description": "Saskatoon AED Locations",
+    "cordova": {
+        "platforms": [
+            "android",
+            "ios"
+        ],
+        "plugins": {
+            "cordova-plugin-device": {},
+            "cordova-plugin-themeablebrowser": {},
+            "cordova-plugin-nativegeocoder": {},
+            "cordova-plugin-nativestorage": {},
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-statusbar": {},
+            "cordova-plugin-whitelist": {},
+            "cordova-plugin-x-socialsharing": {},
+            "ionic-plugin-keyboard": {},
+            "cordova-plugin-console": {},
+            "cordova-plugin-inappbrowser": {}
+        }
     }
-  ],
-  "description": "Saskatoon AED Locations"
 }
