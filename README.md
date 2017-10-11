@@ -16,8 +16,7 @@
 
 ---
 
-### iOS
-[AED.ipa](builds/AED.ipa)
+### iOS [download IPA](builds/AED.ipa)
 
 #### Run
 ```
@@ -32,8 +31,7 @@ ionic cordova build ios --prod --release -- --buildConfig=build.json
 
 ---
 
-### Android
-[AED.apk](builds/AED.apk)
+### Android [download APK](builds/AED.apk)
 
 #### Run
 ```
