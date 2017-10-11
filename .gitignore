@@ -40,7 +40,6 @@ node_modules
 *.DS_Store
 
 # ANDROID
-*.apk
 *.ap_
 *.dex
 *.class
@@ -99,6 +98,5 @@ xcuserdata/
 *.moved-aside
 *.xcuserstate
 *.hmap
-*.ipa
 *.dSYM.zip
 *.dSYM
