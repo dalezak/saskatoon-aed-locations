@@ -49,7 +49,6 @@ bin/
 gen/
 out/
 .gradle/
-build/
 local.properties
 proguard/
 *.log
@@ -63,7 +62,6 @@ captures/
 .externalNativeBuild
 
 ## IOS
-build/
 DerivedData/
 *.pbxuser
 !default.pbxuser
@@ -90,7 +88,6 @@ captures/
 .externalNativeBuild
 
 ## IOS
-build/
 DerivedData/
 *.pbxuser
 !default.pbxuser
