@@ -16,14 +16,14 @@
 
 ---
 
-### iOS [download IPA](builds/AED.ipa)
+### [iOS](builds/AED.ipa)
 
-#### Run
+#### [Run](http://ionicframework.com/docs/cli/cordova/run/)
 ```
 ionic cordova run ios --livereload --consolelogs --serverlogs --address localhost --port 3000
 ```
 
-#### Build
+#### [Build](http://ionicframework.com/docs/cli/cordova/build/)
 ```
 rvm use system
 ionic cordova build ios --prod --release -- --buildConfig=build.json
@@ -31,14 +31,14 @@ ionic cordova build ios --prod --release -- --buildConfig=build.json
 
 ---
 
-### Android [download APK](builds/AED.apk)
+### [Android](builds/AED.apk)
 
-#### Run
+#### [Run](http://ionicframework.com/docs/cli/cordova/run/)
 ```
 ionic cordova run android --livereload --consolelogs --serverlogs --address localhost --port 3000
 ```
 
-#### Build
+#### [Build](http://ionicframework.com/docs/cli/cordova/build/)
 ```
 ionic cordova build android --prod --release --device -- --buildConfig=build.json
 ```
