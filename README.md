@@ -16,28 +16,28 @@
 
 ---
 
-### [iOS Run](http://ionicframework.com/docs/cli/cordova/run/ target="_blank")
+### [iOS Run](http://ionicframework.com/docs/cli/cordova/run/)
 ```
 ionic cordova run ios --livereload --consolelogs --serverlogs --address localhost --port 3000
 ```
 
-### [iOS Build](http://ionicframework.com/docs/cli/cordova/build/ target="_blank")
+### [iOS Build](http://ionicframework.com/docs/cli/cordova/build/)
 ```
 rvm use system
 ionic cordova build ios --prod --release -- --buildConfig=build.json
 ```
 
 ### iOS Download
-[AED.ipa](builds/AED.ipa target="_blank)
+[AED.ipa](builds/AED.ipa)
 
 ---
 
-### [Android Run](http://ionicframework.com/docs/cli/cordova/run/ target="_blank")
+### [Android Run](http://ionicframework.com/docs/cli/cordova/run/)
 ```
 ionic cordova run android --livereload --consolelogs --serverlogs --address localhost --port 3000
 ```
 
-### [Android Build](http://ionicframework.com/docs/cli/cordova/build/ target="_blank")
+### [Android Build](http://ionicframework.com/docs/cli/cordova/build/)
 ```
 ionic cordova build android --prod --release --device -- --buildConfig=build.json
 ```
@@ -52,7 +52,7 @@ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore saskatoon.keyst
 ```
 
 ### Android Download
-[AED.apk](builds/AED.apk target="_blank")
+[AED.apk](builds/AED.apk)
 
 ---
 
