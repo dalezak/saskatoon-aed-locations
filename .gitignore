@@ -3,7 +3,7 @@ platforms/
 plugins/
 
 #IONIC
-
+.sourcemaps
 secrets.ts
 node_modules
 .tmp
@@ -22,7 +22,6 @@ bin/
 gen/
 out/
 .gradle/
-build/
 local.properties
 proguard/
 *.log
