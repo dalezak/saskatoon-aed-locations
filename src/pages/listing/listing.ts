@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, Platform, NavController, NavParams, Loading, LoadingController, Toast, ToastController, Alert, AlertController } from 'ionic-angular';
 
-import { RssService } from '../../providers/rss-service';
+import { ApiService } from '../../providers/api-service';
 
 import { Location } from '../../models/location';
 
@@ -11,7 +11,7 @@ import { DetailsPage } from '../../pages/details/details';
 @Component({
   selector: 'page-listing',
   templateUrl: 'listing.html',
-  providers: [ RssService ],
+  providers: [ ApiService ],
   entryComponents:[ DetailsPage ]
 })
 export class ListingPage {
@@ -19,7 +19,7 @@ export class ListingPage {
   locations:any[] = [];
 
   constructor(
-    protected rss:RssService,
+    protected api:ApiService,
     protected platform:Platform,
     protected navParams:NavParams,
     protected navController:NavController,
@@ -33,7 +33,7 @@ export class ListingPage {
   }
 
   loadLocations(cache:boolean, event:any=null) {
-    return this.rss.getLocations(cache).then((locations:Location[]) => {
+    return this.api.getLocations(cache).then((locations:Location[]) => {
       this.locations = locations;
       if (event) {
         event.complete();

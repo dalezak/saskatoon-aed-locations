@@ -3,8 +3,8 @@
   "app_id": "",
   "proxies": [
     {
-      "path": "/opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations/",
-      "proxyUrl": "http://opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations/"
+      "path": "/AEDLocations",
+      "proxyUrl": "http://opendata-saskatoon.cloudapp.net:8080/v1/SaskatoonOpenDataCatalogueBeta/AEDLocations"
     }
   ],
   "integrations": {

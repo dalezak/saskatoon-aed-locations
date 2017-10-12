@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="ca.dalezak.saskatoon.aed" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="ca.dalezak.saskatoon.aed" version="0.2.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>AED</name>
     <description>Saskatoon AED Locations</description>
     <author email="dalezak@gmail.com" href="https://github.com/dalezak">Dale Zak</author>
@@ -28,6 +28,7 @@
     <preference name="android-targetSdkVersion" value="24" />
     <preference name="android-minSdkVersion" value="19" />
     <preference name="LoadUrlTimeoutValue" value="90000" />
+    <preference name="UseSwiftLanguageVersion" value="4" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
@@ -89,7 +90,7 @@
     <allow-navigation href="http://192.168.0.12:8100" />
     <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.4.0" />
-    <plugin name="cordova-plugin-console" spec="^1.0.5" />
+    <plugin name="cordova-plugin-add-swift-support" spec="^1.7.0" />
     <plugin name="cordova-plugin-device" spec="^1.1.6" />
     <plugin name="cordova-plugin-inappbrowser" spec="^1.7.1" />
     <plugin name="cordova-plugin-nativegeocoder" spec="^1.0.2" />

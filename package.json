@@ -12,14 +12,14 @@
         "ionic:serve": "ionic-app-scripts serve"
     },
     "dependencies": {
-        "@angular/common": "^4.4.3",
-        "@angular/compiler": "^4.4.3",
-        "@angular/compiler-cli": "^4.4.3",
-        "@angular/core": "^4.4.3",
-        "@angular/forms": "^4.4.3",
-        "@angular/http": "^4.4.3",
-        "@angular/platform-browser": "^4.4.3",
-        "@angular/platform-browser-dynamic": "^4.4.3",
+        "@angular/common": "4.4.3",
+        "@angular/compiler": "4.4.3",
+        "@angular/compiler-cli": "4.4.3",
+        "@angular/core": "4.4.3",
+        "@angular/forms": "4.4.3",
+        "@angular/http": "4.4.3",
+        "@angular/platform-browser": "4.4.3",
+        "@angular/platform-browser-dynamic": "4.4.3",
         "@ionic-native/core": "^3.14.0",
         "@ionic-native/device": "^3.14.0",
         "@ionic-native/native-geocoder": "^3.14.0",
@@ -27,13 +27,14 @@
         "@ionic-native/social-sharing": "^3.14.0",
         "@ionic-native/splash-screen": "^3.14.0",
         "@ionic-native/status-bar": "^3.14.0",
-        "@ionic-native/themeable-browser": "^4.3.1",
+        "@ionic-native/themeable-browser": "^3.14.0",
         "@ionic/storage": "^2.0.1",
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
-        "cordova-plugin-add-swift-support": "^1.6.0",
-        "cordova-plugin-console": "^1.0.5",
+        "cordova-plugin-add-swift-support": "^1.7.0",
+        "cordova-plugin-compat": "^1.2.0",
         "cordova-plugin-device": "^1.1.6",
+        "cordova-plugin-file": "^4.3.3",
         "cordova-plugin-inappbrowser": "^1.7.1",
         "cordova-plugin-nativegeocoder": "^1.0.2",
         "cordova-plugin-nativestorage": "^2.2.2",
@@ -64,7 +65,8 @@
         "cordova-plugin-nativestorage",
         "cordova-plugin-whitelist",
         "cordova-plugin-x-socialsharing",
-        "ionic-plugin-keyboard"
+        "ionic-plugin-keyboard",
+        "cordova-plugin-add-swift-support"
     ],
     "cordovaPlatforms": [
         "ios",
@@ -90,8 +92,8 @@
             "cordova-plugin-whitelist": {},
             "cordova-plugin-x-socialsharing": {},
             "ionic-plugin-keyboard": {},
-            "cordova-plugin-console": {},
-            "cordova-plugin-inappbrowser": {}
+            "cordova-plugin-inappbrowser": {},
+            "cordova-plugin-add-swift-support": {}
         }
     }
 }

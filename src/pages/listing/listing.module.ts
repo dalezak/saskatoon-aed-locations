@@ -4,6 +4,8 @@ import { ListingPage } from './listing';
 
 import { PipesModule } from '../../pipes/pipes.module';
 
+import { ApiService } from '../../providers/api-service';
+
 @NgModule({
   declarations: [
     ListingPage,
@@ -17,6 +19,7 @@ import { PipesModule } from '../../pipes/pipes.module';
   ],
   exports: [
     ListingPage
-  ]
+  ],
+  providers: [ ApiService ]
 })
 export class ListingModule {}
